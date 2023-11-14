@@ -1,10 +1,10 @@
 # Online Newspaper Web Application :desktop_computer:
 
-## Introduction
+## Introduction :technologist:
 This project, undertaken by our team of four students, aims to create an online newspaper web application similar to prominent news portals like BBC News, The Times, or The Guardian. Our application is built using the Django framework and incorporates advanced web technologies for a seamless user experience.
 
 ## Features
-- **User Authentication**: Custom User model based on Django's AbstractUser. Includes functionalities for account creation, login, and logout using Django's authentication framework.
+- **User Authentication :mag:**: Custom User model based on Django's AbstractUser. Includes functionalities for account creation, login, and logout using Django's authentication framework.
 - **Profile Management :bust_in_silhouette:** : Users can update their profile image, email, and date of birth on a dedicated profile page. Profile updates are handled via Ajax using Vue and the fetch API.
 - **News Browsing :earth_africa:**: The app allows users to browse news articles categorized into various sections like Sport, World, Finance, etc.
 - **Personalized News Feed :star2:**: Users can select their favorite news categories in their profile, and the app will tailor the news feed to show articles from these categories.
