@@ -1,63 +1,29 @@
-# Template for ECS639U Group Coursework
+# Online Newspaper Web Application Project
 
-This template should be used as the starting point for your group coursework in the module ECS639U Web Programming (at Queen Mary University of London). Use Git (github.qmul.ac.uk) to collaborate on the coursework with your group members. Module leader: Paulo Oliva <[p.oliva@qmul.ac.uk](mailto:p.oliva@qmul.ac.uk)>
+## Introduction
+This project, undertaken by our team of four students, aims to create an online newspaper web application similar to prominent news portals like BBC News, The Times, or The Guardian. Our application is built using the Django framework and incorporates advanced web technologies for a seamless user experience.
 
-## Local development
+## Features
+- **User Authentication**: Custom User model based on Django's AbstractUser. Includes functionalities for account creation, login, and logout using Django's authentication framework.
+- **Profile Management**: Users can update their profile image, email, and date of birth on a dedicated profile page. Profile updates are handled via Ajax using Vue and the fetch API.
+- **News Browsing**: The app allows users to browse news articles categorized into various sections like Sport, World, Finance, etc.
+- **Personalized News Feed**: Users can select their favorite news categories in their profile, and the app will tailor the news feed to show articles from these categories.
+- **Interactive Comments**: Users can post, reply, edit, and delete comments on articles. Comment management is also facilitated through Ajax.
+- **Technologies Used**: The Vue frontend utilizes TypeScript with static typing, including custom interfaces for news articles and categories. The Python backend is enhanced with type annotations for static type checking.
 
-To run this project in your development machine, follow these steps:
+## Deployment and Testing
+- **Platform**: The application will be deployed on the EECS OpenShift platform.
+- **Testing Accounts**: Includes 5 test users and 10 news articles across at least three categories.
+- **Admin Access**: Login credentials for the admin page will be provided.
 
-1. Create and activate a conda environment
+## Contributions
+Each group member is responsible for specific aspects of the project, with their roles and contributions detailed in this section.
 
-2. Fork this repo and clone your fork (or clone the forked repo of one of your team members), e.g.
+## Access and Submission
+- **Application URL**: [To be added upon deployment]
+- **Test User Credentials**: List of usernames and passwords for the test users.
+- **Admin Credentials**: Username and password for the admin page.
 
-    ```console
-    $ git clone https://github.qmul.ac.uk/<username>/cwgroup
-    ```
-
-3. Install Pyhton dependencies (main folder):
-
-    ```console
-    $ pip install -r requirements.txt
-    ```
-
-4. Create a development database:
-
-    ```console
-    $ python manage.py migrate
-    ```
-
-5. Install JavaScript dependencies (from 'frontend' folder):
-
-    ```console
-    $ npm install
-    ```
-
-6. If everything is alright, you should be able to start the Django development server from the main folder:
-
-    ```console
-    $ python manage.py runserver
-    ```
-
-7. and the Vue server from the 'frontend' sub-folder:
-
-    ```console
-    $ npm run dev
-    ```
-
-8. Open your browser and go to http://localhost:5173, you will be greeted with a template page.
-
-## OpenShift deployment
-
-Once your project is ready to be deployed you will need to 'build' the Vue app and place it in Django's static folder.
-
-1. The build command in package.json and the vite.config.ts files have already been modified so that when running 'npm run build' the generated JavaScript and CSS files will be placed in the mainapp static folder, and the index.html file will be placed in the templates folder:
-
-    ```console
-    $ npm run build
-    ```
-
-2. You should then follow the instruction on QM+ on how to deploy your app on EECS's OpenShift live server.
-
-## License
-
-This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to [CC0](http://creativecommons.org/publicdomain/zero/1.0/).
+## Technical Requirements
+- **Django Version**: Django 4.2
+- **Python Version**: Python 3
