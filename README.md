@@ -21,7 +21,7 @@ This project, undertaken by our team of four students, aims to create an online 
 - **Test User Credentials**: List of usernames and passwords for the test users.
 - **Admin Credentials**: Username and password for the admin page.
 
-## Technical Requirements :memo::pencil:
+## Technical Requirements :memo:
 - **Django Version**: Django 4.2
 - **Python Version**: Python 3
 
