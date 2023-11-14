@@ -5,11 +5,11 @@ This project, undertaken by our team of four students, aims to create an online 
 
 ## Features
 - **User Authentication**: Custom User model based on Django's AbstractUser. Includes functionalities for account creation, login, and logout using Django's authentication framework.
-- **Profile Management :busts_in_silhouette:** : Users can update their profile image, email, and date of birth on a dedicated profile page. Profile updates are handled via Ajax using Vue and the fetch API.
-- **News Browsing**: The app allows users to browse news articles categorized into various sections like Sport, World, Finance, etc.
-- **Personalized News Feed**: Users can select their favorite news categories in their profile, and the app will tailor the news feed to show articles from these categories.
-- **Interactive Comments**: Users can post, reply, edit, and delete comments on articles. Comment management is also facilitated through Ajax.
-- **Technologies Used**: The Vue frontend utilizes TypeScript with static typing, including custom interfaces for news articles and categories. The Python backend is enhanced with type annotations for static type checking.
+- **Profile Management :bust_in_silhouette:** : Users can update their profile image, email, and date of birth on a dedicated profile page. Profile updates are handled via Ajax using Vue and the fetch API.
+- **News Browsing :earth_africa:**: The app allows users to browse news articles categorized into various sections like Sport, World, Finance, etc.
+- **Personalized News Feed :star2:**: Users can select their favorite news categories in their profile, and the app will tailor the news feed to show articles from these categories.
+- **Interactive Comments :busts_in_silhouette:**: Users can post, reply, edit, and delete comments on articles. Comment management is also facilitated through Ajax.
+- **Technologies Used :globe_with_meridians:**: The Vue frontend utilizes TypeScript with static typing, including custom interfaces for news articles and categories. The Python backend is enhanced with type annotations for static type checking.
 
 ## Deployment and Testing :test_tube:
 - **Platform**: The application will be deployed on the EECS OpenShift platform.
