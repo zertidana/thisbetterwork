@@ -3,7 +3,7 @@
 ## Introduction :technologist:
 This project, undertaken by our team of four students, aims to create an online newspaper web application similar to prominent news portals like BBC News, The Times, or The Guardian. Our application is built using the Django framework and incorporates advanced web technologies for a seamless user experience.
 
-## Features
+## Features :electron:
 - **User Authentication :mag:**: Custom User model based on Django's AbstractUser. Includes functionalities for account creation, login, and logout using Django's authentication framework.
 - **Profile Management :bust_in_silhouette:** : Users can update their profile image, email, and date of birth on a dedicated profile page. Profile updates are handled via Ajax using Vue and the fetch API.
 - **News Browsing :earth_africa:**: The app allows users to browse news articles categorized into various sections like Sport, World, Finance, etc.
@@ -11,7 +11,7 @@ This project, undertaken by our team of four students, aims to create an online 
 - **Interactive Comments :busts_in_silhouette:**: Users can post, reply, edit, and delete comments on articles. Comment management is also facilitated through Ajax.
 - **Technologies Used :globe_with_meridians:**: The Vue frontend utilizes TypeScript with static typing, including custom interfaces for news articles and categories. The Python backend is enhanced with type annotations for static type checking.
 
-## Deployment and Testing :test_tube:
+## Deployment and Testing :atom:
 - **Platform**: The application will be deployed on the EECS OpenShift platform.
 - **Testing Accounts**: Includes 5 test users and 10 news articles across at least three categories.
 - **Admin Access**: Login credentials for the admin page will be provided.
