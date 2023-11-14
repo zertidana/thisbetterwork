@@ -14,7 +14,7 @@ This project, undertaken by our team of four students, aims to create an online 
 ## Deployment and Testing :atom:
 - **Platform**: The application will be deployed on the EECS OpenShift platform.
 - **Testing Accounts**: Includes 5 test users and 10 news articles across at least three categories.
-- **Admin Access**: Login credentials for the admin page will be provided.
+- **Admin Access**: Login credentials for the admindfgdgd page will be provided.
 
 ## Access and Submission
 - **Application URL**: [To be added upon deployment]
