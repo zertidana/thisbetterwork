@@ -30,3 +30,4 @@ This project, undertaken by our team of four students, aims to create an online 
 * Visard Neza
 * Reesha Lad
 * Aqib Kabir
+* Maryam Ekhtiari
