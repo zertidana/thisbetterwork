@@ -1,32 +1,23 @@
 <template>
     <main class="container pt-4">
-        <div>
-            <router-link
-                class=""
-                :to="{name: 'Main Page'}"
-            >
-                Main Page
-            </router-link>
-            |
-            <router-link
-                class=""
-                :to="{name: 'Other Page'}"
-            >
-                Other Page
-            </router-link>
-            <a href="http://127.0.0.1:8000/accounts/login/"> | Login</a>
-            <a href="http://127.0.0.1:8000/accounts/signup/"> | Sign Up</a>
+        <div id="app">
+            <NavBar/>
+            <router-view/>
         </div>
-        <RouterView class="flex-shrink-0" />
     </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
+import NavBar from './pages/components/NavBar.vue';
 
 export default defineComponent({
-    components: { RouterView },
+    components: { 
+        RouterView,
+        NavBar
+    },
+
 });
 
 </script>

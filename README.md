@@ -27,8 +27,8 @@ This project, undertaken by our team of four students, aims to create an online 
 
 ## Credits :test_tube:
 <<<<<<< HEAD
-* Dana Zerti : Assigned to kdsjflsdkjhf
-* Visard Neza : Completed msdbfksfkw
+* Dana Zerti : Handled news article and category models, the commenting system, and the navigation bar.
+* Visard Neza : Completed the entire login and sign in system, both frontend and backend.
 * Reesha Lad : Reesha was in charge of kjsgdfkgf
 * Aqib Kabir : Aqib implemented ksjdfksfhjlwje
 =======
