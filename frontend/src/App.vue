@@ -15,6 +15,7 @@
                 Other Page
             </router-link>
             <a href="http://127.0.0.1:8000/accounts/login/"> | Login</a>
+            <a href="http://127.0.0.1:8000/accounts/signup/"> | Sign Up</a>
         </div>
         <RouterView class="flex-shrink-0" />
     </main>
