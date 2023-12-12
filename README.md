@@ -26,7 +26,14 @@ This project, undertaken by our team of four students, aims to create an online 
 - **Python Version**: Python 3
 
 ## Credits :test_tube:
+<<<<<<< HEAD
+* Dana Zerti : Assigned to kdsjflsdkjhf
+* Visard Neza : Completed msdbfksfkw
+* Reesha Lad : Reesha was in charge of kjsgdfkgf
+* Aqib Kabir : Aqib implemented ksjdfksfhjlwje
+=======
 * Dana Zerti
 * Visard Neza
 * Reesha Lad
 * Aqib Kabir
+>>>>>>> 56e63029d153ee7eb8207ddcc8180e05769c2902

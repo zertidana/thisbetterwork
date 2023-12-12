@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "cwgroup-main",
+			"path": "../../../cwgroup-main"
+		},
+		{
+			"name": "thisbetterwork",
+			"path": "../../../cw/thisbetterwork"
+		}
+	],
+	"settings": {}
+}
