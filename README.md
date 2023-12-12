@@ -9,12 +9,12 @@ This project, undertaken by our team of four students, aims to create an online 
 - **News Browsing :earth_africa:**: The app allows users to browse news articles categorized into various sections like Sport, World, Finance, etc.
 - **Personalized News Feed :star2:**: Users can select their favorite news categories in their profile, and the app will tailor the news feed to show articles from these categories.
 - **Interactive Comments :busts_in_silhouette:**: Users can post, reply, edit, and delete comments on articles. Comment management is also facilitated through Ajax.
-- **Technologies Used :globe_with_meridians:**: The Vue frontend utilizes TypeScript with static typing, including custom interfaces for news articles and categories. The Python backend is enhanced with type annotations for static type checking.
+- **Technologies Used :globe_with_meridians:**: The Vue frontend utilises TypeScript with static typing, including custom interfaces for news articles and categories. The Python backend is enhanced with type annotations for static type checking.
 
 ## Deployment and Testing :atom:
 - **Platform**: The application will be deployed on the EECS OpenShift platform.
 - **Testing Accounts**: Includes 5 test users and 10 news articles across at least three categories.
-- **Admin Access**: Login credentials for the admindfgdgd page will be provided.
+- **Admin Access**: Login credentials for the admind page will be provided.
 
 ## Access and Submission
 - **Application URL**: [To be added upon deployment]
@@ -26,14 +26,7 @@ This project, undertaken by our team of four students, aims to create an online 
 - **Python Version**: Python 3
 
 ## Credits :test_tube:
-<<<<<<< HEAD
 * Dana Zerti : Handled news article and category models, the commenting system, and the navigation bar.
 * Visard Neza : Completed the entire login and sign in system, both frontend and backend.
 * Reesha Lad : Reesha was in charge of kjsgdfkgf
 * Aqib Kabir : Aqib implemented ksjdfksfhjlwje
-=======
-* Dana Zerti
-* Visard Neza
-* Reesha Lad
-* Aqib Kabir
->>>>>>> 56e63029d153ee7eb8207ddcc8180e05769c2902
