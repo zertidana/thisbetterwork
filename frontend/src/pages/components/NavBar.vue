@@ -31,7 +31,6 @@
 </template>
 
 <script lang="ts">
-// Script content remains the same
+
 </script>
 
-<!-- Since Bootstrap is being used, you might not need additional custom styles -->

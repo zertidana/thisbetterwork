@@ -2,7 +2,6 @@
   <div class="h1">
     {{ title }}
   </div>
-  
 
 </template>
 
@@ -12,7 +11,7 @@
     export default defineComponent({
         data() {
             return {
-                title: "Main Page",
+                title: "All Categories ",
             }
         }
     })
