@@ -6,4 +6,4 @@ def main_spa(request: HttpRequest) -> HttpResponse:
     return render(request, 'api/spa/index.html', {})
 
 def home(request):
-    return render(request,'home.html')
+    return render(request,'App.vue')
