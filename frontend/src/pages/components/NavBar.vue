@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <router-link class="navbar-brand" to="/App.vue">Home</router-link>
+      <router-link class="navbar-brand" to="/">Home</router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -12,12 +12,13 @@
               All Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><router-link class="dropdown-item" to="/SportsPage.vue">Sports</router-link></li>
-              <li><router-link class="dropdown-item" to="/FashionPage.vue">Fashion</router-link></li>
-              <li><router-link class="dropdown-item" to="/EducationPage.vue">Education</router-link></li>
-              <li><router-link class="dropdown-item" to="/ArtPage.vue">Art</router-link></li>
-              <li><router-link class="dropdown-item" to="/WorldPage.vue">World News</router-link></li>
-              <li><router-link class="dropdown-item" to="/FinancePage.vue">Finance</router-link></li>
+              <li><router-link class="dropdown-item" to="/SportsPage">Sports</router-link></li>
+              <li><router-link class="dropdown-item" to="/FashionPage">Fashion</router-link></li>
+              <li><router-link class="dropdown-item" to="/EducationPage">Education</router-link></li>
+              <li><router-link class="dropdown-item" to="/ArtPage">Art</router-link></li>
+              <li><router-link class="dropdown-item" to="/WorldPage">World News</router-link></li>
+              <li><router-link class="dropdown-item" to="/FinancePage">Finance</router-link></li>
+              <li><router-link class="dropdown-item" to="/ProfilePage">Profile Page</router-link></li>
             </ul>
           </li>
         </ul>
