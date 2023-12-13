@@ -2,12 +2,7 @@
   <nav class="navbar">
     <ul>
       <li><router-link to="/App.vue">Home</router-link></li>
-            <li><router-link
-                class=""
-                :to="{name: 'Main Page'}"
-            >
-                Home
-            </router-link></li>
+
             
             <li><router-link
                 class=""
