@@ -23,5 +23,8 @@ from .views import main_spa
 
 urlpatterns = [
     path('', views.home,name='home'),
+<<<<<<< HEAD
+=======
 
+>>>>>>> a879f1f64c011493bae68bb5737ce9bccfecafbf
 ]
