@@ -18,10 +18,6 @@ const router = createRouter({
     routes: [
         { path: '/', name: 'Home', component: MainPage },
         { path: '/AllCategories/', name: 'All Categories', component: AllCategories },
-<<<<<<< HEAD
-
-=======
->>>>>>> a879f1f64c011493bae68bb5737ce9bccfecafbf
     ]
 })
 
