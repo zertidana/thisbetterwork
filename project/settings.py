@@ -136,5 +136,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 INTERNAL_IPS = ['127.0.0.1']
 
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "http://localhost:5173"
 LOGOUT_REDIRECT_URL = "home"
