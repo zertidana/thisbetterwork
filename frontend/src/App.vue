@@ -14,21 +14,21 @@
 <script lang="ts">
 
 export default {
-  data() {
-    return {
-      isLoggedIn: false,
-      username: ''
-    }
-  },
-  mounted() {
-    this.checkLoginStatus();
-  },
-  methods: {
-    async checkLoginStatus(){
-      let response = await fetch("http://127.0.0.1:8000/api/check_login_status/")
-      let data = await response.json()
-      this.isLoggedIn = data.LoggedIn
-    }
+    data() {
+        return {
+        isLoggedIn: false,
+        username: ''
+        }
+    },
+    mounted() {
+        this.checkLoginStatus();
+    },
+    methods: {
+        async checkLoginStatus(){
+        let response = await fetch("http://127.0.0.1:8000/api/check_login_status/")
+        let data = await response.json()
+        this.isLoggedIn = data.LoggedIn
+        }
 
 
 
@@ -46,3 +46,7 @@ export default {
   }
 
 </script>
+
+<style scoped>
+
+</style>
