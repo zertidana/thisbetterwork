@@ -8,6 +8,7 @@
   <main>
     {% block content %}
     {% endblock %}
+    <script>window.CSRF_TOKEN = "{{ csrf_token }}";</script>
   </main>
 </body>
 </html>

@@ -19,14 +19,34 @@
   import { defineComponent, ref, reactive, onMounted } from "vue";
   import { RouterView } from "vue-router";
   import NavBar from './pages/components/NavBar.vue';
+  import axios from 'axios';
   
   export default defineComponent({
     components: {
       RouterView,
       NavBar
     },
+    data() {
+        return{
+            sessionData: {},
+        }
+    },
+    mounted() {
+        this.fetchSessionData();
+    },
+    methods: {
+        async fetchSessionData() {
+            try {
+                const response = await axios.get('/api/get_session_data/');
+                this.sessionData = response.data;
+            } catch (error) {
+                console.error('Error fetching session data:', error);
+            }
+        },
+    },
     setup() {
       const isLoggedIn = ref(false);
+      
       const userInfo = reactive({
         username: '',
         email: '',
@@ -37,8 +57,9 @@
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
-            // Add any necessary headers like authorization tokens here
+            
             },
+            credentials: 'include'
         })
         .then(response => response.json())
         .then(data => {

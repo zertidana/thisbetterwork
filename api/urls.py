@@ -24,4 +24,5 @@ from .views import main_spa
 urlpatterns = [
     path('', views.home,name='home'),
     path('api/check_login_status', views.check_login_status, name = 'check_login_status'),
+    path('api/get_session_data/', views.get_session_data, name='get_session_data'),
 ]
