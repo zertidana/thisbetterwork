@@ -26,6 +26,6 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
-    path('api/get_session_data/', views.get_session_data, name='get_session_data'),
+    path('api/check_login_status/', views.check_login_status, name='check_login_status'),
 
 ]
