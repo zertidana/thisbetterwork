@@ -1,11 +1,11 @@
 <template>
   <div>
     <!-- Content shown to logged-in users -->
-    <div v-if="isLoggedIn">
+    <div >
       Welcome, {{ username }}!
     </div>
     <!-- Content shown to guests -->
-    <div v-else>
+    <div >
       Please log in.
     </div>
   </div>
