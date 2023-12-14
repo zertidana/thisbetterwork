@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, reactive, onMounted } from "vue";
+import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
 import NavBar from './pages/components/NavBar.vue';
 
