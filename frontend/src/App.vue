@@ -1,48 +1,45 @@
 <template>
-  <div>
-    <!-- Content shown to logged-in users -->
-    <div >
-      Welcome, {{ username }}!
+  <main class="container pt-4">
+    <div id="app">
+      <NavBar />
+      <router-view/>
+      <div >
+        
+      </div>
+      <div >
+      
+      </div>
     </div>
-    <!-- Content shown to guests -->
-    <div >
-      Please log in.
-    </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
+import { defineComponent } from "vue";
+import { RouterView } from "vue-router";
+import NavBar from './pages/components/NavBar.vue';
 
-export default {
+
+export default defineComponent({
+  components: {
+    RouterView,
+    NavBar
+  },
   data() {
-    return {
-      isLoggedIn: false,
-      username: ''
-    }
+      return{
+          
+      }
   },
   mounted() {
-    this.checkLoginStatus();
+      
   },
   methods: {
-    async checkLoginStatus(){
-      let response = await fetch("http://127.0.0.1:8000/api/check_login_status/")
-      let data = await response.json()
-      this.isLoggedIn = data.LoggedIn
-    }
-
-
-
-    // async checkLoginStatus() {
-    //   await fetch('/api/check_login_status')
-    //   .then(data =>{
-    //     console.log(data)
-    //   })
-      // const data = await response.json();
-      // console.log(response);
-      // this.isLoggedIn = data.LoggedIn;
-      // this.username = data.username; // Set username if logged in
       
-    }
-  }
-
+  },
+  setup() {
+    
+  },
+});
 </script>
+
+<style scoped>
+</style>
