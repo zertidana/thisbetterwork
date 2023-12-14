@@ -6,3 +6,13 @@ def main_spa(request: HttpRequest) -> HttpResponse:
 
 def home(request):
     return render(request,'App.vue')
+
+def check_login_status(request):
+    if request.user.is_authenticated:
+        user_info ={
+            'loggedIn' : True,
+            'username' : request.user.username,
+        }
+        return JsonResponse({'LoggedIn': True})
+    else:
+        return JsonResponse({'LoggedIn': False})

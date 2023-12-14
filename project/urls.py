@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-
+from api import views
 urlpatterns = [
     #path('', include('api.urls')),
     path('health', lambda request: HttpResponse("OK")),
@@ -26,4 +26,5 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
+    path('api/check_login_status', views.check_login_status, name='check_login_status'),
 ]
