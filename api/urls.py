@@ -23,5 +23,5 @@ from .views import main_spa
 
 urlpatterns = [
     path('', views.home,name='home'),
-    
+    path('api/authenticate/', views.authenticate_user, name='authenticate_user'),
 ]
