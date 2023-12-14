@@ -18,9 +18,10 @@
               <li><router-link class="dropdown-item" to="/ArtPage">Art</router-link></li>
               <li><router-link class="dropdown-item" to="/WorldPage">World News</router-link></li>
               <li><router-link class="dropdown-item" to="/FinancePage">Finance</router-link></li>
-              <li><router-link class="dropdown-item" to="/ProfilePage">Profile Page</router-link></li>
             </ul>
+
           </li>
+          <li><router-link class="" to="/ProfilePage">Profile Page</router-link></li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="http://127.0.0.1:8000/accounts/login/">Login</a></li>
