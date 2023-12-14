@@ -3,18 +3,12 @@
     <div id="app">
       <NavBar />
       <router-view/>
-      <div >
-        
-      </div>
-      <div >
-      
-      </div>
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent} from "vue";
+
 import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
 import NavBar from './pages/components/NavBar.vue';
@@ -24,20 +18,6 @@ export default defineComponent({
   components: {
     RouterView,
     NavBar
-  },
-  data() {
-      return{
-          
-      }
-  },
-  mounted() {
-      
-  },
-  methods: {
-      
-  },
-  setup() {
-    
   },
 });
 </script>
