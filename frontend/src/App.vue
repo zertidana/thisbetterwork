@@ -19,7 +19,7 @@
   import { defineComponent, ref, reactive, onMounted } from "vue";
   import { RouterView } from "vue-router";
   import NavBar from './pages/components/NavBar.vue';
-  import axios from 'axios';
+  import axios from "axios";
   
   export default defineComponent({
     components: {
