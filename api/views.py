@@ -19,7 +19,7 @@ def check_login_status(request):
     
 def get_session_data(request):
     session_data = {
-        'user_id': request.session.get('user_id'),
+        'user_id': request.session.session_key,
         # Add other session data you want to expose
     }
     return JsonResponse(session_data)
