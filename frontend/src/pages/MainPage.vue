@@ -5,32 +5,31 @@
   <div>
     {{ counter.count }}
   </div>
-  <!--I am thinking ideally this would be  
+  <!--I am thinking idealy this would be  
   the page that once the user logs in, it has 
   his favourite categories and comments etc -->
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from "vue";
-import { useCounterStore } from "@/stores/auth";
-
-export default defineComponent({
-  data() {
-    return {
-      title: "Main Page",
-    };
-  },
-  setup() {
-    const counter = useCounterStore();
-
-   
-    onMounted(() => {
-      counter.increment();
-    });
+    import { defineComponent, ref } from "vue";
+    import { defineStore } from "pinia";
     
-    return { counter };
-  },
-});
+    export const useCounterStore = defineStore('counter', () => {
+      const count = ref(0)
+      function increment() {
+        count.value++
+      }
+
+      return { count, increment }
+    })
+
+    export default defineComponent({
+        data() {
+            return {
+                title: "Main Page",
+            }
+        }
+    })
 </script>
 
 <style scoped>
