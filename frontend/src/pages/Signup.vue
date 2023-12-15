@@ -6,20 +6,25 @@
         <!-- Username Field -->
         <div class="form-group mb-3">
           <label for="usernameInput" class="form-label">Username</label>
-          <input type="text" v-model="username" class="form-control" id="usernameInput" placeholder="Enter username">
+          <input type="text" v-model="username" class="form-control" id="usernameInput" placeholder="Enter username" required>
         </div>
   
         <!-- Password Field -->
         <div class="form-group mb-4">
           <label for="passwordInput" class="form-label">Password</label>
-          <input type="password" v-model="password" class="form-control" id="passwordInput" placeholder="Password">
+          <input type="password" v-model="password" class="form-control" id="passwordInput" placeholder="Password" required>
         </div>
 
         <div class="form-group mb-4">
           <label for="passwordInput2" class="form-label">Confirm Password</label>
-          <input type="password" v-model="password2" class="form-control" id="passwordInput2" placeholder="Password">
+          <input type="password" v-model="password2" class="form-control" id="passwordInput2" placeholder="Password" required>
         </div>
-  
+        <div v-if="passwordError" class="alert alert-danger">
+            Passwords do not match.
+        </div>
+        <div v-if="userExistsError" class="alert alert-danger">
+            Username already exists.
+        </div>
         <!-- Submit Button -->
         <button type="submit" class="btn btn-primary w-100">Submit</button>
       </form>
@@ -29,21 +34,28 @@
   
   <script lang="ts">
       import { defineComponent } from "vue";
-  
+      import router from '../router/index.ts'
       export default defineComponent({
           data() {
               return {
                   username: '',
                   password: '',
                   password2: '',
-                  token: ''
+                  token: '',
+                  passwordError: false,
+                  userExistsError: false,
               }
           },
           methods: {
             async submit() {
+                this.passwordError = false;
+                this.userExistsError = false;
+
                 if (this.password != this.password2) {
-                    return alert("ERROR")
+                    this.passwordError = true;
+                    return;
                 }
+
               console.log(this.password)
               console.log(this.username)
               const requestOptions = {
@@ -54,7 +66,7 @@
                 body: JSON.stringify({ "username": this.username, "password": this.password })
               }
   
-              await fetch('http://127.0.0.1:8000/accounts/signup', requestOptions)
+              const response = await fetch('http://127.0.0.1:8000/accounts/signup', requestOptions)
               const requestOptions2 = {
                 method: "POST",
                 headers: {
@@ -63,9 +75,16 @@
                 body: JSON.stringify({ "username": this.username, "password": this.password})
                 }
 
+                if (response.status === 400) { 
+                    this.userExistsError = true;
+                    return;
+                }
+
+
                 const signup = await fetch('http://127.0.0.1:8000/accounts/login', requestOptions2)
                 var data = await signup.json() 
                 this.token = data.token // Global store this
+                router.push({ path: '/MainPage'})
             },
   
           },

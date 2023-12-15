@@ -1,18 +1,25 @@
 <template>
-  <form onsubmit="return false">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Username</label>
-      <input type="text" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
-    </div>
+    <div class="container mt-5">
+      <form @submit.prevent="login()" class="border p-4 bg-light">
+        <h2 class="mb-4 text-center">Log In!</h2>
+  
+        <!-- Username Field -->
+        <div class="form-group mb-3">
+          <label for="usernameInput" class="form-label">Username</label>
+          <input type="text" v-model="username" class="form-control" id="usernameInput" placeholder="Enter username" required>
+        </div>
+  
+        <!-- Password Field -->
+        <div class="form-group mb-4">
+          <label for="passwordInput" class="form-label">Password</label>
+          <input type="password" v-model="password" class="form-control" id="passwordInput" placeholder="Password" required>
+        </div>
 
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
     </div>
-    <button @click="login()"  class="btn btn-primary">Submit</button>
-  </form>
-
-</template>
+  </template>
 
 <script lang="ts">
     import { defineComponent } from "vue";
