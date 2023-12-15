@@ -26,7 +26,27 @@ This project, undertaken by our team of four students, aims to create an online 
 - **Python Version**: Python 3
 
 ## Credits :test_tube:
-* Dana Zerti : Handled news article and category models, the commenting system, and the navigation bar.
-* Visard Neza : Completed the entire login and sign in system, both frontend and backend.
-* Reesha Lad : Reesha was in charge of the profile page backend and also has done the styling.
-* Aqib Kabir : Aqib completed all of the frontend for the profile and categories and the styling of the website.
+* Dana Zerti : Full-stack Developer
+    - Modelling of application data, including users, news articles, categories, and comments
+    - Using frontend routing (Vue router) and a global store (pinia)
+    - Profile page included, with profile picture, email, date of birth and list of favourite news categories (all editable via Ajax)
+    - Users are able to post comments on news articles, and reply to previous comments via Ajax
+    - Deployed app to Openshift
+
+* Visard Neza : Full-stack Developer 
+    - Account creation and login 
+    - Using Django's AbstractUser model with required fields and Django's authentication framework
+    - Using frontend routing (Vue router) and a global store (pinia)
+    - Modelling of application data, including users, news articles, categories, and comments
+    - Used  static types both in Python (type annotations) and Vue (typescript)
+
+* Reesha Lad : Frontend Developer
+    - Profile page included, with profile picture, email, date of birth and list of favourite news categories
+    - Page with a list of news article included, with articles grouped by category
+    - Completed README.md 
+
+* Aqib Kabir : Frontend Developer
+    - Profile page included, with profile picture, email, date of birth and list of favourite news categories
+    - Page with a list of news article included, with articles grouped by category
+    - Users are able to comment on news articles
+    - Created the articles

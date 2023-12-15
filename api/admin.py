@@ -5,9 +5,9 @@ admin.site.register(Category)
 
 class AdminNews(admin.ModelAdmin):
     # It isn't showing the time for some reason; fix it 
-    list_display = ('title', 'category', 'add_time')
+    list_display = ('title', 'category', 'add_time', 'preview')
 
-admin.site.register(News)
+admin.site.register(News, AdminNews)
 
 class AdminComment(admin.ModelAdmin):
     list_display = ('news', 'email', 'comment', 'status')

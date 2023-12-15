@@ -25,6 +25,7 @@ class News(models.Model):
     category=models.ForeignKey(Category,on_delete=models.CASCADE) 
     title=models.CharField(max_length=300)
     image=models.ImageField(upload_to='imgs/')
+    preview = models.CharField(max_length=255, default='No preview available')
     detail=models.TextField()
     add_time=models.TimeField(auto_now_add=True)
 
@@ -43,6 +44,8 @@ class Comment(models.Model):
     comment=models.TextField()
     add_time=models.TimeField(auto_now_add=True)
     status=models.BooleanField(default=False)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies')
+
 
     def __str__(self):
         return self.comment

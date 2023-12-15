@@ -9,6 +9,7 @@
   <p><a href="{% url 'logout' %}">Log Out</a></p>
 {% else %}
   <p>You are not logged in</p>
+  <p>If you are looking for the Django admin page, add /admin to the end of your path</p>
   <a href="{% url 'login' %}">Log In</a>
 {% endif %}
 {% endblock %}

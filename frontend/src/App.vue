@@ -18,7 +18,7 @@ import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
 import NavBar from './pages/components/NavBar.vue';
 import NavBar2 from './pages/components/NavBar2.vue';
-import { useUserStore } from "./stores/auth.ts";
+import { useUserStore } from "../stores/auth";
 
 
 export default defineComponent({

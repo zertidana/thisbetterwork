@@ -1,0 +1,107 @@
+HOME PAGE 
+    - To be complete using frontend
+    - Adding favourited categories 
+    - Connecting backend
+SPORTS PAGE 
+    - To connect to the backend, fetch data using tokens and a global store
+    - Comments dont work, do that via Ajax
+OTHER CATEGORIES
+    - Copy and past all of the other categories
+    - Connect backend
+    - Comments dont work, do that too via Ajax
+PROFILE PAGE
+    - Cannot change profile image or email. 
+    - When logout then logging back in, the data I saved previously is gone. should be saved via Ajax (using Vue and the fetch API).
+README.md
+    - List what everyone did
+    - The URL of the deployed application
+    - Username and password for the admin page
+    - Username and password of 5 test users
+B4 SUBMISSION
+    - 5 test users
+    - 10 news articles
+    - At least 3 catgories
+    - Complete the README.md file
+
+so the articles are all grouped into categories, everything in the backend works, and I have to make at least 3 pages for these categories, how do I fetch the data using AJAX and store it globally using pinia
+
+QUESTIONS:
+in backend terminal, run this: python manage.py shell
+and enter this into the shell:
+# Import your models
+from api.models import Category, News, Comment
+
+# Count the number of categories
+print(Category.objects.count())
+
+# List all categories
+for category in Category.objects.all():
+    print(category.title)
+
+# Count the number of news articles
+print(News.objects.count())
+
+# List the first 5 news articles
+for news in News.objects.all()[:5]:
+    print(news.title, news.category)
+
+# List comments for a specific news article
+news_item = News.objects.first()
+comments = Comment.objects.filter(news=news_item)
+for comment in comments:
+    print(comment.comment)
+
+Can you see the catgeroies and the news articles I wrote??
+
+Did they specify what type of databse we need to have or can i assume its SQLite
+
+Component for displaying articles in a category:
+<template>
+  <div v-for="article in filteredArticles" :key="article.id">
+    <!-- Display article details -->
+  </div>
+</template>
+
+<script>
+import { useArticleStore } from './store';
+
+export default {
+  computed: {
+    filteredArticles() {
+      const store = useArticleStore();
+      return store.articles.filter(article => article.categoryId === this.$route.params.id);
+    }
+  },
+  mounted() {
+    const store = useArticleStore();
+    if (store.categories.length === 0) {
+      store.fetchCategories();
+    }
+    store.fetchArticlesByCategory(this.$route.params.id);
+  }
+}
+</script>
+
+
+Access the store state in your components to display categories and articles:
+<template>
+  <div>
+    <div v-for="category in categories" :key="category.id">
+      <!-- Display category details and link to category page -->
+    </div>
+  </div>
+</template>
+
+<script>
+import { useArticleStore } from './store';
+
+export default {
+  computed: {
+    categories() {
+      const store = useArticleStore();
+      return store.categories;
+    }
+  }
+}
+</script>
+

@@ -37,7 +37,7 @@
 </style>
 <script lang="ts">
     import { defineComponent } from "vue";
-    import { useUserStore } from "../../stores/auth.ts";
+    import { useUserStore } from "../../../stores/auth";
     export default defineComponent({
         data() {
             return {
