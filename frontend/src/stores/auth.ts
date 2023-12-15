@@ -1,14 +1,28 @@
 import { defineStore } from 'pinia'
-
-export const useCounterStore = defineStore('counter', {
-  state: () => {
-    return { count: 0 }
-  },
-  // could also be defined as
-  // state: () => ({ count: 0 })
+// store.js
+export const useUserStore = defineStore('user', {
+  state: () => ({
+    isLoggedIn: false,
+    username: '',
+    favoriteCategories: []
+  }),
   actions: {
-    increment() {
-      this.count++
+    logIn(username) {
+      this.isLoggedIn = true
+      this.username = username
+      // Additional login logic
     },
+    logOut() {
+      this.isLoggedIn = false
+      this.username = ''
+      // Additional logout logic
+    },
+    updateFavoriteCategories(categories) {
+      this.favoriteCategories = categories
+      // Additional logic to update categories
+    }
   },
+  getters: {
+    isUserLoggedIn: (state) => state.isLoggedIn
+  }
 })
