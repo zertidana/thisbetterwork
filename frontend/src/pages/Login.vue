@@ -3,6 +3,10 @@
       <form @submit.prevent="login()" class="border p-4 bg-light">
         <h2 class="mb-4 text-center">Log In!</h2>
   
+        <div v-if="loginError" class="alert alert-danger">
+          {{ loginErrorMessage }}
+        </div>
+
         <!-- Username Field -->
         <div class="form-group mb-3">
           <label for="usernameInput" class="form-label">Username</label>
@@ -23,17 +27,27 @@
 
 <script lang="ts">
     import { defineComponent } from "vue";
+    import router from '../router/index.ts'
+    import { useUserStore } from '../stores/auth.ts';
 
     export default defineComponent({
         data() {
             return {
                 username: '',
                 password: '',
-                token: ''
+                token: '',
+                loginError: false,
+                loginErrorMessage: '',
+
             }
         },
         methods: {
           async login() {
+
+            this.loginError = false;
+            this.loginErrorMessage = '';
+
+
             const requestOptions = {
               method: "POST",
               headers: {
@@ -43,8 +57,16 @@
             }
 
             const signup = await fetch('http://127.0.0.1:8000/accounts/login', requestOptions)
+            if (!signup.ok){
+                this.loginError = true;
+                this.loginErrorMessage  = 'Login failed. Please try again.'
+                return;
+            }
             var data = await signup.json() 
-            this.token = data.token // Global store this
+            const userStore = useUserStore();
+            userStore.login(data.user.username, data.token);
+            this.token = data.token 
+            router.push({ path: '/'})
           },
         },
     })
