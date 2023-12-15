@@ -17,35 +17,19 @@
 
   
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
-import axios from 'axios';
-
-export default defineComponent({
-  setup() {
-    const articles = ref([]);
-
-    onMounted(async () => {
-      try {
-        const response = await axios.get('/api/articles?categoryName=Sports');
-        articles.value = response.data;
-      } catch (error) {
-        console.error('Error fetching articles:', error);
+  import { defineComponent } from "vue";
+  import { useUserStore } from "../../stores/auth";
+  export default defineComponent({
+      data() {
+          return {
+              title: "Sports Page",
+          }
+      },
+      setup(){
+        const userStore = useUserStore();
+        return { userStore };
       }
-    });
-
-    return { articles };
-  },
-  data() {
-    return {
-      title: "Sports News",
-    };
-  },
-  methods: {
-    //submitComment(articleIndex) {
-      // Logic to handle comment submission for a specific article
-    //}
-  }
-});
+  })
 </script>
 
   

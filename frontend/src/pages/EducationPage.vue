@@ -1,14 +1,24 @@
 <template>
-    <div class="h1">
-      {{ title }}
-    </div>
+  <div class="h3">
+    {{ title }}
+  </div>
+</template>
 
-  </template>
-  
-  <script lang="ts">
+<script lang="ts">
+  import { defineComponent } from "vue";
+  import { useUserStore } from "../../stores/auth";
+  export default defineComponent({
+      data() {
+          return {
+              title: "Education Page",
+          }
+      },
+      setup(){
+        const userStore = useUserStore();
+        return { userStore };
+      }
+  })
+</script>
 
-  </script>
-  
-  <style scoped>
-  </style>
-  
+<style scoped>
+</style>
