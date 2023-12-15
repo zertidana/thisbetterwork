@@ -9,17 +9,17 @@
     </div>
     <div class="profile-image-section">
       <img :src="profileImage" alt="Profile Image" />
-      <button class="edit-button">Edit</button>
+      <button class="edit-button" @click="edit">Edit</button>
     </div>
     <div class="input-section">
       <label for="email" class="input-label">Email:</label>
       <input type="text" v-model="email" name="email">
-      <button class="save-button">Save</button>
+      <button class="save-button" @click="saveemail">Save</button>
     </div>
     <div class="input-section">
       <label for="dob" class="input-label">Date of Birth:</label>
       <input type="date" v-model="dob" name="dob">
-      <button class="save-button">Save</button>
+      <button class="save-button" @click="saveDob">Save</button>
     </div>
     <div class="favorite-category-section">
       <label v-for="(category, index) in categories" :key="index">
@@ -58,6 +58,40 @@ export default defineComponent ({
     async saveCategory(){
       
     },
+    async saveDob(){
+      
+    },
+    async saveemail() {
+    
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Token ${this.userStore.token}` // If authentication is required
+        },
+        body: JSON.stringify({ 
+          username: this.userStore.username, 
+          email: this.email
+        })
+      };
+
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/update-email/', requestOptions);
+
+        if (!response.ok) {
+          throw new Error('Failed to save email.');
+        }
+
+        alert('Email saved successfully!');
+      } catch (error) {
+        console.error('Error saving email:', error);
+        alert('Failed to save email.');
+      }
+    },
+    async edit(){
+      
+    },
+
 
     
   }

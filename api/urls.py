@@ -18,11 +18,11 @@ from django.contrib import admin
 from django.urls import include, path
 from django.http import HttpResponse
 from . import views
-from .views import ProfileUpdateView
+from .views import update_email
 
 from .views import main_spa
 
 urlpatterns = [
     path('', views.home,name='home'),
-    
+    path('api/update-email/', views.update_email, name='update-email'),
 ]

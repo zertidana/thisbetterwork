@@ -59,3 +59,4 @@ def logout(request):
     request.user.auth_token.delete()
     print(request.user)
     return Response({"done": True})
+
