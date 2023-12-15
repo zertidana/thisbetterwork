@@ -17,7 +17,7 @@ This project, undertaken by our team of four students, aims to create an online 
 - **Admin Access**: Login credentials for the admind page will be provided.
 
 ## Access and Submission
-- **Application URL**: [To be added upon deployment]
+- **Application URL**: https://group15-web-apps-ec21715.apps.a.comp-teach.qmul.ac.uk/
 - **Test User Credentials**: List of usernames and passwords for the test users.
 - **Admin Credentials**: Username: admin password:123456789
 
@@ -43,7 +43,8 @@ This project, undertaken by our team of four students, aims to create an online 
 * Reesha Lad : Frontend Developer
     - Profile page included, with profile picture, email, date of birth and list of favourite news categories
     - Page with a list of news article included, with articles grouped by category
-    - Completed README.md 
+    - Completed README.md
+
 
 * Aqib Kabir : Frontend Developer
     - Profile page included, with profile picture, email, date of birth and list of favourite news categories
