@@ -1,9 +1,8 @@
 <template>
-<<<<<<< HEAD
   <div class="container fashion-page">
     <h3 class="mb-4">{{ title }}</h3>
     <div class="row">
-      <div class="col-md-6 mb-3" v-for="(article, index) in articles" :key="index">
+      <div class="col-md-6 mb-3" v-for="(article, index) in news" :key="index">
         <div class="card">
           <img :src="article.image" :alt="article.title" class="card-img-top">
           <div class="card-body">
@@ -13,17 +12,6 @@
               <textarea v-model="article.comment" placeholder="Add a comment..."></textarea>
               <button @click="submitComment(index)">Submit</button>
             </div>
-=======
-  <div class="container sports-page">
-    <h3 class="mb-4">{{ title }}</h3>
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img >
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
->>>>>>> f444ae8ed9118e99ec8aedc6082863e8ca5589de
           </div>
         </div>
       </div>

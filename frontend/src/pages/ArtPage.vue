@@ -18,17 +18,10 @@
   
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { useArticleStore } from '../../stores/articleStore';
 
 export default defineComponent({
   setup() {
-    const articleStore = useArticleStore();
 
-    onMounted(() => {
-      articleStore.fetchArticlesByCategoryName('Sports');
-    });
-
-    return { articleStore };
   },
   data() {
     return {
