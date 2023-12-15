@@ -26,13 +26,8 @@ urlpatterns = [
     path('', views.home,name='home'),
     path('api/update-email/', views.update_email, name='update-email'),
     path('post-comment/', post_comment, name='post_comment'),
-<<<<<<< HEAD
     #path('api/news', views.get_news, name='get_news'),
     path('api/news', views.get_news_by_category, name='get_news_by_category'),
-=======
-    #path('api/articles', views.get_articles, name='get_articles'),
-    path('api/articles', views.get_articles_by_category, name='get_articles_by_category'),
->>>>>>> f444ae8ed9118e99ec8aedc6082863e8ca5589de
     path('api/categories', views.get_categories, name='get_categories'),
 
 ]
