@@ -21,7 +21,7 @@
 
   
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
@@ -38,7 +38,7 @@ export default defineComponent({
 </script>
 
   
-  <style scoped>
+<style scoped>
   .sports-page {
       width: 80%;
       margin: auto;
