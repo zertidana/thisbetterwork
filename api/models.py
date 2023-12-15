@@ -1,5 +1,6 @@
 from turtle import title
 from django.db import models
+from multiselectfield import MultiSelectField
 
 # Categories
 class Category(models.Model):
@@ -49,3 +50,10 @@ class Profile(models.Model):
     ProfileImage = models.ImageField(upload_to='imgs/')
     Email = models.EmailField(max_length=254)
     DoB = models.DateField()
+    CAT_CHOICES = (('SPORTS', 'Sports'),
+              ('FASHION', 'Fashion'),
+              ('EDUCATION', 'Education'),
+              ('ART', 'Art'),
+              ('WORLDNEWS', 'World News'),
+              ('FINANCE', 'Finance'))
+    Favourite = MultiSelectField(choices=CAT_CHOICES,max_choices=9,max_length=9)

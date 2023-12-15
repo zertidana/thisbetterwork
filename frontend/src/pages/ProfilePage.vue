@@ -1,5 +1,9 @@
 <template>
+  <div class="title">
+    <h1>{{ title }}</h1>
+  </div>
   <div class="profile-container">
+    
     <div class="username-section">
       <h2>{{ userStore.username }}</h2>
     </div>
@@ -18,15 +22,10 @@
       <button class="save-button">Save</button>
     </div>
     <div class="favorite-category-section">
-    <label for="favoriteCategory">Favorite Category:</label>
-    <select v-model="selectedCategory" name="favoriteCategory" id="favoriteCategory">
-      <option value="Sports">Sports</option>
-      <option value="Fashion">Fashion</option>
-      <option value="Education">Education</option>
-      <option value="Art">Art</option>
-      <option value="World News">World News</option>
-      <option value="Finance">Finance</option>
-    </select>
+      <label v-for="(category, index) in categories" :key="index">
+    <input type="checkbox" v-model="selectedCategories" :value="category"> {{ category }}
+    </label>
+
     <button class="save-button" @click="saveCategory">Save</button>
   </div>
   </div>
@@ -44,13 +43,15 @@ export default defineComponent ({
 
   data() {
     return {
-      username: 'Aqib',
-      email: 'aqib@coolguy.com',
-      dob: '2002-01-01',
-      profileImage: 'https://ih0.redbubble.net/image.777653777.6638/raf,360x360,075,t,fafafa:ca443f4786.jpg', // Replace with actual image path
-      favoriteCategory: 'Sports',
-      title: "art Page",
-      selectedCategory: '',
+      username: '',
+      email: '',
+      dob: '',
+      profileImage: '', 
+      favoriteCategory: '',
+      title: "Profile Page",
+      selectedCategories: [],
+      categories: ['Sports', 'Fashion', 'Education', 'Art', 'World News', 'Finance']
+
     };
   },
   methods: {
@@ -62,6 +63,10 @@ export default defineComponent ({
 </script>
 
 <style scoped>
+
+.title {
+   text-align: center;
+ }
 .profile-container {
     max-width: 600px;
     margin: 50px auto;
