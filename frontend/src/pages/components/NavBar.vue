@@ -23,8 +23,8 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="http://127.0.0.1:8000/accounts/login/">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/accounts/signup/">Sign Up</a></li>
+          <li><router-link class="nav-link" to="/Login">Login</router-link></li>
+          <li><router-link class="nav-link" to="/Signup">Sign Up</router-link></li>
         </ul>
       </div>
     </div>
