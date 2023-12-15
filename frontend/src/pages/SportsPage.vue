@@ -17,21 +17,6 @@
 
   
 <script lang="ts">
-<<<<<<< HEAD
-  import { defineComponent } from "vue";
-  import { useUserStore } from "../../stores/auth";
-  export default defineComponent({
-      data() {
-          return {
-              title: "Sports Page",
-          }
-      },
-      setup(){
-        const userStore = useUserStore();
-        return { userStore };
-      }
-  })
-=======
 import { defineComponent, onMounted } from 'vue';
 import { useArticleStore } from '../../stores/articleStore';
 
@@ -56,7 +41,6 @@ export default defineComponent({
     }
   }
 });
->>>>>>> parent of cc64090 (h)
 </script>
 
   
