@@ -99,8 +99,4 @@ export default defineComponent({
   .comment-section button:hover {
       background-color: #218838;
   }
-<<<<<<< HEAD
   </style>
-=======
-  </style>
->>>>>>> f444ae8ed9118e99ec8aedc6082863e8ca5589de

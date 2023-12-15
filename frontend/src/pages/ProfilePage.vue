@@ -1,31 +1,32 @@
 <template>
-  <div class="title">
-    <h1>{{ title }}</h1>
-  </div>
   <div class="profile-container">
-    
     <div class="username-section">
-      <h2>{{ userStore.username }}</h2>
+      <h2>{{ username }}</h2>
     </div>
     <div class="profile-image-section">
       <img :src="profileImage" alt="Profile Image" />
-      <button class="edit-button" @click="edit">Edit</button>
+      <button class="edit-button">Edit</button>
     </div>
     <div class="input-section">
       <label for="email" class="input-label">Email:</label>
       <input type="text" v-model="email" name="email">
-      <button class="save-button" @click="saveemail">Save</button>
+      <button class="save-button">Save</button>
     </div>
     <div class="input-section">
       <label for="dob" class="input-label">Date of Birth:</label>
       <input type="date" v-model="dob" name="dob">
-      <button class="save-button" @click="saveDob">Save</button>
+      <button class="save-button">Save</button>
     </div>
     <div class="favorite-category-section">
-      <label v-for="(category, index) in categories" :key="index">
-    <input type="checkbox" v-model="selectedCategories" :value="category"> {{ category }}
-    </label>
-
+    <label for="favoriteCategory">Favorite Category:</label>
+    <select v-model="selectedCategory" name="favoriteCategory" id="favoriteCategory">
+      <option value="Sports">Sports</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Education">Education</option>
+      <option value="Art">Art</option>
+      <option value="World News">World News</option>
+      <option value="Finance">Finance</option>
+    </select>
     <button class="save-button" @click="saveCategory">Save</button>
   </div>
   </div>
