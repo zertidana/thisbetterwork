@@ -35,6 +35,9 @@
   <script lang="ts">
       import { defineComponent } from "vue";
       import router from '../router/index.ts'
+      import { useUserStore } from '../stores/auth.ts';
+
+
       export default defineComponent({
           data() {
               return {
@@ -83,6 +86,15 @@
 
                 const signup = await fetch('http://127.0.0.1:8000/accounts/login', requestOptions2)
                 var data = await signup.json() 
+                const userStore = useUserStore();
+                
+                if (response.ok) {
+                    userStore.login(data.user.username, data.token);
+                    
+                } else {
+                    
+                }
+
                 this.token = data.token // Global store this
                 router.push({ path: '/MainPage'})
             },
