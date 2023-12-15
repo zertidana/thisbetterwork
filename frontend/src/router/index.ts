@@ -13,6 +13,8 @@ import FashionPage from '../pages/FashionPage.vue';
 import FinancePage from '../pages/FinancePage.vue';
 import SportsPage from '../pages/SportsPage.vue';
 import WorldPage from '../pages/WorldPage.vue';
+import Login from '../pages/Login.vue';
+import Signup from '../pages/Signup.vue';
 
 
 let base = (import.meta.env.MODE == 'development') ? import.meta.env.BASE_URL : ''
@@ -32,6 +34,8 @@ const router = createRouter({
         { path: '/FinancePage', name: 'Finance Page', component: FinancePage },
         { path: '/SportsPage', name: 'Sport Page', component: SportsPage },
         { path: '/WorldPage', name: 'World Page', component: WorldPage },
+        { path: '/Login', name: 'Login Page', component: Login },
+        { path: '/Signup', name: 'Signup Page', component: Signup },
     ]
 })
 
