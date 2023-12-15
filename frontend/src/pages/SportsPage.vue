@@ -17,8 +17,12 @@
   
   <script lang="ts">
   import { defineComponent } from "vue";
-  
+  import { useUserStore } from "../stores/auth.ts";
   export default defineComponent({
+    setup(){
+          const userStore = useUserStore();
+          return { userStore };
+        },
       data() {
           return {
               title: "Sports Page",

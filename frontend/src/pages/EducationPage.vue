@@ -8,15 +8,19 @@
   </template>
   
   <script lang="ts">
-      import { defineComponent } from "vue";
-  
-      export default defineComponent({
-          data() {
-              return {
-                  title: "Education Page",
-              }
-          }
-      })
+    import { defineComponent } from "vue";
+    import { useUserStore } from "../stores/auth.ts";
+    export default defineComponent({
+        data() {
+            return {
+                title: "Education Page",
+            }
+        },
+        setup(){
+          const userStore = useUserStore();
+          return { userStore };
+        }
+    })
   </script>
   
   <style scoped>

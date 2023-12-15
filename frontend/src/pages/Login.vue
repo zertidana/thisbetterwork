@@ -29,7 +29,8 @@
     import { defineComponent } from "vue";
     import router from '../router/index.ts'
     import { useUserStore } from '../stores/auth.ts';
-
+    
+    
     export default defineComponent({
         data() {
             return {

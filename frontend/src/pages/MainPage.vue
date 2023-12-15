@@ -15,7 +15,7 @@
 
 <script lang="ts">
     import { defineComponent } from "vue";
-    import { useUserStore } from "../stores/auth";
+    import { useUserStore } from "../stores/auth.ts";
 
     export default defineComponent({
         data() {

@@ -32,21 +32,33 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useUserStore } from "../stores/auth.ts";
+export default defineComponent ({
+  setup()
+  {
+    const userStore = useUserStore();
+    return { userStore };
+  },
+
   data() {
     return {
       username: 'Aqib',
       email: 'aqib@coolguy.com',
       dob: '2002-01-01',
       profileImage: 'https://ih0.redbubble.net/image.777653777.6638/raf,360x360,075,t,fafafa:ca443f4786.jpg', // Replace with actual image path
-      favoriteCategory: 'Sports'
+      favoriteCategory: 'Sports',
+      title: "art Page",
+      selectedCategory: '',
     };
   },
   methods: {
-    // Add methods for handling profile updates
+    saveCategory(){
+
+    },
   }
-};
+})
 </script>
 
 <style scoped>
