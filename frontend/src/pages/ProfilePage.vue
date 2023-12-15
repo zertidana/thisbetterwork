@@ -19,7 +19,7 @@
     </div>
     <div class="favorite-category-section">
     <label for="favoriteCategory">Favorite Category:</label>
-    <select v-model="selectedCategory" name="favoriteCategory" id="favoriteCategory">
+    <select name="favoriteCategory" id="favoriteCategory">
       <option value="Sports">Sports</option>
       <option value="Fashion">Fashion</option>
       <option value="Education">Education</option>

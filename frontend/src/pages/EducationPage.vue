@@ -9,7 +9,7 @@
       <button v-if="!article.showFullArticle" @click="article.showFullArticle = true">View more</button>
       <div class="comment-section" v-if="article.showFullArticle">
         <textarea v-model="article.comment" placeholder="Add a comment..."></textarea>
-        <button @click="submitComment(index)">Submit</button>
+        <button @click="(index)">Submit</button>
       </div>
     </div>
   </div>

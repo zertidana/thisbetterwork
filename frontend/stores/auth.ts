@@ -5,13 +5,13 @@ export const useUserStore = defineStore('user', {
         token: null,
     }),
     actions: {
-        login(username, token) {
+        login(username: string,token: token) {
             this.username = username;
             this.token = token;
         },
         logout() {
-            this.username = null;
-            this.token = null;
+            this.username = 'null';
+            this.token = '';
         }
     }
 });
