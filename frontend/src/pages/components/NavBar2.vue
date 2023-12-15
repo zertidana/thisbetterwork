@@ -36,6 +36,7 @@
   }
 </style>
 <script lang="ts">
+
     import { defineComponent } from "vue";
     import { useUserStore } from "../../../stores/auth";
     export default defineComponent({
@@ -61,7 +62,7 @@
           var data = await loggedOut.json()
           if (data.done) {
             alert("logged out")
-            this.userStore.login(null,null);
+            this.userStore.login('','null');
           }
           }
         }
