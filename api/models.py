@@ -44,3 +44,8 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment
+    
+class Profile(models.Model):
+    ProfileImage = models.ImageField(upload_to='imgs/')
+    Email = models.EmailField(max_length=254)
+    DoB = models.DateField()

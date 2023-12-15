@@ -18,7 +18,7 @@
               <li><router-link class="dropdown-item" to="/ArtPage">Art</router-link></li>
               <li><router-link class="dropdown-item" to="/WorldPage">World News</router-link></li>
               <li><router-link class="dropdown-item" to="/FinancePage">Finance</router-link></li>
-              <li><router-link class="dropdown-item" to="/ProfilePage">Profile Page</router-link></li>
+              
             </ul>
           </li>
         </ul>

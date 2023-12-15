@@ -18,19 +18,23 @@
               <li><router-link class="dropdown-item" to="/ArtPage">Art</router-link></li>
               <li><router-link class="dropdown-item" to="/WorldPage">World News</router-link></li>
               <li><router-link class="dropdown-item" to="/FinancePage">Finance</router-link></li>
-              <li><router-link class="dropdown-item" to="/ProfilePage">Profile Page</router-link></li>
+              
             </ul>
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li><router-link class="nav-link" to="/Login">Login</router-link></li>
-          <li><router-link class="nav-link" to="/Signup">Sign Up</router-link></li>
+          <li><router-link class="nav-link" to="/ProfilePage">Profile Page</router-link></li>
+          <li class="nav-item nav-link nav-bar-item" @click="logout()">Sign out</li>
         </ul>
       </div>
     </div>
   </nav>
 </template>
-
+<style>
+  .nav-bar-item:hover {
+    cursor: pointer;
+  }
+</style>
 <script lang="ts">
     import { defineComponent } from "vue";
     import { useUserStore } from "../../stores/auth.ts";
@@ -43,6 +47,23 @@
         setup(){
           const userStore = useUserStore();
           return { userStore };
+        },
+        methods:{
+          async logout(){
+            const requestOptions = {
+            method: "GET",
+            headers: {
+              "Content-type": "application/json",
+              Authorization: "Token " + this.userStore.token
+            },
+          }
+          const loggedOut = await fetch('http://127.0.0.1:8000/accounts/logout', requestOptions)
+          var data = await loggedOut.json()
+          if (data.done) {
+            alert("logged out")
+            this.userStore.login(null,null);
+          }
+          }
         }
     })
 </script>

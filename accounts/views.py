@@ -10,7 +10,7 @@ from rest_framework import status
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
-
+from django.contrib.auth import logout
 from .serializers import UserSerializer
 
 @api_view(['POST'])
@@ -51,3 +51,11 @@ class SignUpView(generic.CreateView):
     form_class = StyledUserCreationForm  # Use the custom form
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
+
+@api_view(['GET'])
+@authentication_classes([SessionAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def logout(request):
+    request.user.auth_token.delete()
+    print(request.user)
+    return Response({"done": True})

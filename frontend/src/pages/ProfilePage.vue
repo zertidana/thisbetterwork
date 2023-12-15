@@ -1,7 +1,7 @@
 <template>
   <div class="profile-container">
     <div class="username-section">
-      <h2>{{ username }}</h2>
+      <h2>{{ userStore.username }}</h2>
     </div>
     <div class="profile-image-section">
       <img :src="profileImage" alt="Profile Image" />
