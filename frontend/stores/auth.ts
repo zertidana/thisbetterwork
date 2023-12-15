@@ -5,7 +5,7 @@ export const useUserStore = defineStore('user', {
         token: null,
     }),
     actions: {
-        login(username: null, token: null) {
+        login(username, token) {
             this.username = username;
             this.token = token;
         },

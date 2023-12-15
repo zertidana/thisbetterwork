@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.http import HttpResponse
 from . import views
-from .views import update_email, post_comment, get_categories, get_articles_by_category
+from .views import update_email, post_comment, get_categories, get_news_by_category
 
 from .views import main_spa
 
@@ -26,8 +26,8 @@ urlpatterns = [
     path('', views.home,name='home'),
     path('api/update-email/', views.update_email, name='update-email'),
     path('post-comment/', post_comment, name='post_comment'),
-    #path('api/articles', views.get_articles, name='get_articles'),
-    path('api/articles/', views.get_articles_by_category, name='get_articles_by_category'),
-    path('api/categories/', views.get_categories, name='get_categories'),
+    #path('api/news', views.get_news, name='get_news'),
+    path('api/news', views.get_news_by_category, name='get_news_by_category'),
+    path('api/categories', views.get_categories, name='get_categories'),
 
 ]

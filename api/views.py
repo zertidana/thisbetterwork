@@ -58,16 +58,16 @@ def get_categories(request):
 
 # GET news articles then filters them by category
 @api_view(['GET'])
-def get_articles_by_category(request):
-    category_name = request.GET.get('categoryName', None)
-    if category_name:
+def get_news_by_category(request):
+    category_title = request.GET.get('categoryTitle', None)
+    if category_title:
         try:
-            category = Category.objects.get(title=category_name)
-            articles = News.objects.filter(category=category)
+            category = Category.objects.get(title=category_title)
+            news = News.objects.filter(category=category)
         except Category.DoesNotExist:
             return JsonResponse({'error': 'Category not found'}, status=404)
     else:
-        articles = News.objects.all()  # or a default behavior
+        news = News.objects.all()  # or a default behavior
 
-    serializer = NewsSerializer(articles, many=True)
+    serializer = NewsSerializer(news, many=True)
     return JsonResponse(serializer.data, safe=False)
