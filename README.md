@@ -19,7 +19,7 @@ This project, undertaken by our team of four students, aims to create an online 
 ## Access and Submission
 - **Application URL**: [To be added upon deployment]
 - **Test User Credentials**: List of usernames and passwords for the test users.
-- **Admin Credentials**: Username and password for the admin page.
+- **Admin Credentials**: Username: admin password:123456789
 
 ## Technical Requirements :memo:
 - **Django Version**: Django 4.2
