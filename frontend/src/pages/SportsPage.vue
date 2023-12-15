@@ -2,7 +2,7 @@
   <div class="container sports-page">
     <h3 class="mb-4">{{ title }}</h3>
     <div class="row">
-      <div class="col-md-6 mb-3" v-for="(article, index) in articleStore.articles" :key="index">
+      <div class="col-md-6 mb-3" v-for="(article, index) in articles" :key="index">
         <div class="card">
           <img :src="article.image" :alt="article.title" class="card-img-top">
           <div class="card-body">
@@ -17,18 +17,23 @@
 
   
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue';
-import { useArticleStore } from '../../stores/articleStore';
+import { defineComponent, onMounted, ref } from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
   setup() {
-    const articleStore = useArticleStore();
+    const articles = ref([]);
 
-    onMounted(() => {
-      articleStore.fetchArticlesByCategoryName('Sports');
+    onMounted(async () => {
+      try {
+        const response = await axios.get('/api/articles?categoryName=Sports');
+        articles.value = response.data;
+      } catch (error) {
+        console.error('Error fetching articles:', error);
+      }
     });
 
-    return { articleStore };
+    return { articles };
   },
   data() {
     return {
@@ -36,9 +41,9 @@ export default defineComponent({
     };
   },
   methods: {
-    submitComment(articleIndex) {
+    //submitComment(articleIndex) {
       // Logic to handle comment submission for a specific article
-    }
+    //}
   }
 });
 </script>

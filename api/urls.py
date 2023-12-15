@@ -27,7 +27,7 @@ urlpatterns = [
     path('api/update-email/', views.update_email, name='update-email'),
     path('post-comment/', post_comment, name='post_comment'),
     #path('api/articles', views.get_articles, name='get_articles'),
-    path('api/articles', views.get_articles_by_category, name='get_articles_by_category'),
-    path('api/categories', views.get_categories, name='get_categories'),
+    path('api/articles/', views.get_articles_by_category, name='get_articles_by_category'),
+    path('api/categories/', views.get_categories, name='get_categories'),
 
 ]
