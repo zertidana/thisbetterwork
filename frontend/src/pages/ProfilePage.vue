@@ -49,15 +49,17 @@ export default defineComponent ({
       profileImage: '', 
       favoriteCategory: '',
       title: "Profile Page",
-      selectedCategories: [],
+      selectedCategories: [] as string[],
       categories: ['Sports', 'Fashion', 'Education', 'Art', 'World News', 'Finance']
 
     };
   },
   methods: {
-    saveCategory(){
-
+    async saveCategory(){
+      
     },
+
+    
   }
 })
 </script>

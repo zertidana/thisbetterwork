@@ -7,18 +7,12 @@ def main_spa(request: HttpRequest) -> HttpResponse:
 def home(request):
     return render(request,'App.vue')
 
-def check_login_status(request):
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import Profile
+from .serializers import ProfileSerializer
+from django.contrib.auth.models import User
+from rest_framework.permissions import IsAuthenticated
 
-    if request.user.is_authenticated:
-        return JsonResponse({'LoggedIn': True, 'username': request.user.username})
-        
-    else:
-        return JsonResponse({'LoggedIn': False})
 
-    
-def get_session_data(request):
-    session_data = {
-        'user_id': request.session.get('user_id'),
-        # Add other session data you want to expose
-    }
-    return JsonResponse(session_data)

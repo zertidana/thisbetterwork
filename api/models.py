@@ -1,6 +1,7 @@
 from turtle import title
 from django.db import models
 from multiselectfield import MultiSelectField
+from django.contrib.auth.models import User
 
 # Categories
 class Category(models.Model):
@@ -47,6 +48,7 @@ class Comment(models.Model):
         return self.comment
     
 class Profile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     ProfileImage = models.ImageField(upload_to='imgs/')
     Email = models.EmailField(max_length=254)
     DoB = models.DateField()
@@ -57,3 +59,5 @@ class Profile(models.Model):
               ('WORLDNEWS', 'World News'),
               ('FINANCE', 'Finance'))
     Favourite = MultiSelectField(choices=CAT_CHOICES,max_choices=9,max_length=9)
+    def __str__(self):
+        return str(self.user)
