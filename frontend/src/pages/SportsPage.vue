@@ -2,7 +2,7 @@
   <div class="container sports-page">
     <h3 class="mb-4">{{ title }}</h3>
     <div class="row">
-      <div class="col-md-6 mb-3" v-for="(article, index) in articles" :key="index">
+      <div class="col-md-6 mb-3" v-for="(article, index) in articleStore.articles" :key="index">
         <div class="card">
           <img :src="article.image" :alt="article.title" class="card-img-top">
           <div class="card-body">
@@ -17,6 +17,7 @@
 
   
 <script lang="ts">
+<<<<<<< HEAD
   import { defineComponent } from "vue";
   import { useUserStore } from "../../stores/auth";
   export default defineComponent({
@@ -30,6 +31,32 @@
         return { userStore };
       }
   })
+=======
+import { defineComponent, onMounted } from 'vue';
+import { useArticleStore } from '../../stores/articleStore';
+
+export default defineComponent({
+  setup() {
+    const articleStore = useArticleStore();
+
+    onMounted(() => {
+      articleStore.fetchArticlesByCategoryName('Sports');
+    });
+
+    return { articleStore };
+  },
+  data() {
+    return {
+      title: "Sports News",
+    };
+  },
+  methods: {
+    submitComment(articleIndex) {
+      // Logic to handle comment submission for a specific article
+    }
+  }
+});
+>>>>>>> parent of cc64090 (h)
 </script>
 
   

@@ -28,9 +28,6 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
     path('api/update-email/', views.update_email, name='update-email'),
-    path('api/', include('api.urls')),
-    
-
     
 
 ]
