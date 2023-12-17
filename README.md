@@ -31,7 +31,7 @@ This project, undertaken by our team of four students, aims to create an online 
     - Using frontend routing (Vue router) and a global store (pinia)
     - Profile page included, with profile picture, email, date of birth and list of favourite news categories (all editable via Ajax)
     - Users are able to post comments on news articles, and reply to previous comments via Ajax
-    - Deployed app to Openshift
+
 
 * Visard Neza : Full-stack Developer 
     - Account creation and login 
@@ -39,6 +39,7 @@ This project, undertaken by our team of four students, aims to create an online 
     - Using frontend routing (Vue router) and a global store (pinia)
     - Modelling of application data, including users, news articles, categories, and comments
     - Used  static types both in Python (type annotations) and Vue (typescript)
+    - Deployed app to Openshift
 
 * Reesha Lad : Frontend Developer
     - Profile page included, with profile picture, email, date of birth and list of favourite news categories
