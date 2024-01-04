@@ -31,7 +31,7 @@ This project, undertaken by our team of four students, aims to create an online 
     - Using frontend routing (Vue router) and a global store (pinia)
     - Profile page included, with profile picture, email, date of birth and list of favourite news categories (all editable via Ajax)
     - Users are able to post comments on news articles, and reply to previous comments via Ajax
-
+    - Completed README.md
 
 * Visard Neza : Full-stack Developer 
     - Account creation and login 
@@ -44,7 +44,7 @@ This project, undertaken by our team of four students, aims to create an online 
 * Reesha Lad : Frontend Developer
     - Profile page included, with profile picture, email, date of birth and list of favourite news categories
     - Page with a list of news article included, with articles grouped by category
-    - Completed README.md
+
 
 
 * Aqib Kabir : Frontend Developer
